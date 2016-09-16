@@ -1,0 +1,39 @@
+{
+ "race": 1,
+ "horses": [{
+  "name": "rambo",
+  "silk": "http:\\a_silk.jpg",
+  "number": 1,
+  "odds": 0.34
+ },
+ {
+  "name": "frisky freddy",
+  "silk": "http:\\a_silk.jpg",
+  "number": 2,
+  "odds": 0.74
+ },
+ {
+  "name": "ivan draco",
+  "silk": "http:\\a_silk.jpg",
+  "number": 3,
+  "odds": 0.94
+ },
+ {
+  "name": "juicy lucy",
+  "silk": "http:\\a_silk.jpg",
+  "number": 4,
+  "odds": 0.44
+ },
+ {
+  "name": "silver surfer",
+  "silk": "http:\\a_silk.jpg",
+  "number": 5,
+  "odds": 0.57
+ },
+ {
+  "name": "hulk hogan",
+  "silk": "http:\\a_silk.jpg",
+  "number": 6,
+  "odds": 0.14
+ }]
+}
