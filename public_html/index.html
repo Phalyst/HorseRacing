@@ -14,6 +14,7 @@ and open the template in the editor.
 		<script src="js/knockout-min.js"></script>
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src=js/bootstrap.min.js></script>
+		<script type="text/javascript" src="input.json"></script>
 		
 		<script>
 			var data = {"race": 1,
@@ -26,8 +27,16 @@ and open the template in the editor.
 							{  "name": "hulk hogan",  "silk": "img/Horse.png",  "number": 6,  "odds": 0.14 }
 						  ]
 					   };
-					   
+//			    $.ajax({
+//                    url: "input.json",
+//                    dataType: "text",
+//                    success: function(data) {
+//			        var data = JSON.parse(input);
+//			      }
+//			     });
+				
 			function AppViewModel() {
+				
 					var self = this;
 					self.finish = ko.observable(0); 
 					self.horses = ko.observableArray(data.horses);
@@ -35,17 +44,20 @@ and open the template in the editor.
 					self.racing = ko.observable(false);
 					
 					self.runRace = function(data,event){
-						self.finish(700);
+						self.finish(870);
 					}
 					
 					self.resetRace = function(data,event){
-						self.finish(-700);
+						self.finish(-870);
 					}
 					
 				};		   
 			
 			
-			$(document).ready(function() {
+	$(document).ready(function() {
+				
+		   
+				
 				$('[data-toggle=RP]').tooltip('show');
 				$('.tooltip').css('z-index', '1020');
 				$('.tooltip').css('top', '35px');
@@ -86,7 +98,7 @@ and open the template in the editor.
 				<tbody data-bind="foreach : horses">
 					<tr>
 						<td>
-							<div class='RPhorse horse'  align='right' data-bind="runHorses: $parent.finish()">
+							<div class='Thorse horse'  align='right' data-bind="runHorses: $parent.finish()">
 								<!-- ko if: $parent.racing()==false -->
 								<img 
 									 data-bind="attr: { src: silk, title: name},tooltip: { title: name, placement: 'right'}"
